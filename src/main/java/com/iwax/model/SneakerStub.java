@@ -1,6 +1,7 @@
 package com.iwax.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,13 +13,13 @@ public class SneakerStub {
 
 	//populate initial sneakers
 	static {
-		Sneaker a = new Sneaker(1L, "U869", "A very deep German UBoat", 44.12, 138.44, 1994, "");
+		Sneaker a = new Sneaker(1L, "U869", "A very deep German UBoat", 44.12, 138.44, new Date(2019-07-12), "");
 		sneakers.put(1L, a);
 		
-		Sneaker b = new Sneaker(2L, "Thistlegorm", "British merchant boat in the Red Sea", 44.12, 138.44, 1994, "");
+		Sneaker b = new Sneaker(2L, "Thistlegorm", "British merchant boat in the Red Sea", 44.12, 138.44, new Date(2019-02-26), "");
 		sneakers.put(2L, b);
 		
-		Sneaker c = new Sneaker(3L, "S.S. Yongala", "A luxury passenger ship wrecked on the great barrier reef", 44.12, 138.44, 1994, "");
+		Sneaker c = new Sneaker(3L, "S.S. Yongala", "A luxury passenger ship wrecked on the great barrier reef", 44.12, 138.44, new Date(2019-02-26), "");
 		sneakers.put(3L, c);
 	}
 

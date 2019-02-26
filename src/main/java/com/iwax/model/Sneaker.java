@@ -1,5 +1,7 @@
 package com.iwax.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,17 +13,25 @@ public class Sneaker {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	Long id;
 
+	String code;
+	
 	String brandName;
 	
-	Double size;
+	String model;
+	
+	Double snkSize;
 	
 	String picture;
 	
 	Double price;
 	
-	Integer releaseDate;
+	Date releaseDate;
 	
 	String description;
+	
+	String starRating;
+	
+	String imageUrl;
 	
 	
 
@@ -29,12 +39,12 @@ public class Sneaker {
 
 
 
-	public Sneaker(Long id, String brandName, String picture,  Double size, Double price, Integer releaseDate,
+	public Sneaker(Long id, String brandName, String picture,  Double snkSize, Double price, Date releaseDate,
 			String description) {
 		super();
 		this.id = id;
 		this.brandName = brandName;
-		this.size = size;
+		this.snkSize = snkSize;
 		this.picture = picture;
 		this.price = price;
 		this.releaseDate = releaseDate;
@@ -67,14 +77,14 @@ public class Sneaker {
 
 
 
-	public Double getSize() {
-		return size;
+	public Double getSnkSize() {
+		return snkSize;
 	}
 
 
 
-	public void setSize(Double size) {
-		this.size = size;
+	public void setSnkSize(Double snkSize) {
+		this.snkSize = snkSize;
 	}
 
 
@@ -103,13 +113,13 @@ public class Sneaker {
 
 
 
-	public Integer getReleaseDate() {
+	public Date getReleaseDate() {
 		return releaseDate;
 	}
 
 
 
-	public void setReleaseDate(Integer releaseDate) {
+	public void setReleaseDate(Date releaseDate) {
 		this.releaseDate = releaseDate;
 	}
 
@@ -125,12 +135,53 @@ public class Sneaker {
 		this.description = description;
 	}
 
-	
-	
 
 
-	
-	
+	public String getStarRating() {
+		return starRating;
+	}
+
+
+
+	public void setStarRating(String starRating) {
+		this.starRating = starRating;
+	}
+
+
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
+
+
+	public String getCode() {
+		return code;
+	}
+
+
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+
+
+	public String getModel() {
+		return model;
+	}
+
+
+
+	public void setModel(String model) {
+		this.model = model;
+	}
 	
 	
 	

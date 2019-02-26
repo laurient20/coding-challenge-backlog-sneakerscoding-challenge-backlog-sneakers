@@ -1,0 +1,6 @@
+INSERT INTO SNEAKER(ID, CODE, BRAND_NAME,MODEL, SNK_SIZE,PICTURE,PRICE,IMAGE_URL)VALUES(1,'00235','NIKE', 'AIR FORCE' ,7, 'https://openclipart.org/image/800px/svg_to_png/308649/1540183692.png',45.5,'https://openclipart.org/image/800px/svg_to_png/308649/1540183692.png');
+
+
+INSERT INTO SNEAKER(ID, CODE, BRAND_NAME,MODEL, SNK_SIZE,PICTURE,PRICE,IMAGE_URL)VALUES(2,'00235','NIKE', 'AIR FORCE' ,7, 'https://openclipart.org/image/800px/svg_to_png/308649/1540183692.png',89.5,'https://openclipart.org/image/800px/svg_to_png/308649/1540183692.png');
+
+http://localhost:4200/server/api/v1/sneakers

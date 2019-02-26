@@ -1,0 +1,68 @@
+<div class="card">
+  <div class="card-headers">
+    Sneakers List
+  </div>
+</div>
+
+<div class="card-body">
+  <div class="row">
+    <div class="col-md-2">Filter By:
+    </div>
+    <div class="col-md-4">
+      <input type="text" name="" value="">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h4>filtered by: </h4>
+  </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table"
+              *ngIf='products && products.length'>
+    <thead>
+      <tr>
+        <th>
+          <button (click) = 'toggleImage()' type="button" name="button" class="btn btn-primary">
+            {{ showImage ? 'Hide' : 'Show' }} Image</button>
+        </th>
+        <th>Brand Name</th>
+        <th>Model</th>
+        <th>Code</th>
+        <th>Size</th>
+        <th>Price</th>
+        <th>Release Date</th>
+        <th>5 Star Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let product of products'>
+        <td><img *ngIf='showImage'
+            [src]='product.imageUrl'
+            [title]='product.brandName'
+            [style.width.px]='imageWidth'
+            [style.margin.px]='imageMargin'>
+         </td>
+        <td>
+          <a [routerLink]="['/products', product.id]">
+            {{product.brandName}}
+          </a>
+        </td>
+        <td>{{product.model}}</td>
+        <td>{{product.code | lowercase | ConvertToSpaces: '-'}}</td>
+        <td>{{product.snkSize}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.releaseDate}}</td>
+        <td><pm-star [rating] = 'product.starRating'>
+        </pm-star></td>
+      </tr>
+
+    </tbody>
+
+
+  </table>
+
+</div>
